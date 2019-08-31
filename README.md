@@ -26,28 +26,28 @@ The user can:
 
 - Clone the application using git clone(this copies the app onto your device). In terminal:
 
-          $ git clone https://github.com/Jameskirwa/Instagram.git
-          $ cd Instagram
+           git clone https://github.com/Jameskirwa/Instagram.git
+           cd Instagram
 
 - Creating the virtual environment
 
-          $ python3.6 -m venv --without-pip virtual
-          $ source virtual/bin/env
-          $ curl https://bootstrap.pypa.io/get-pip.py | python
+           python3.6 -m venv --without-pip virtual
+           source virtual/bin/env
+           curl https://bootstrap.pypa.io/get-pip.py | python
 
 - Installing Flask and other Modules
 
-          $ python3.6 -m pip install -r requirements.txt
+           python3.6 -m pip install -r requirements.txt
 
 - Run the application:
 
-          $ python3.6 manage.py runserver
+           python3.6 manage.py runserver
 
 ### Testing the Application
 
 - To run the tests for the class files:
 
-          $ python3.6 manage.py test
+           python3.6 manage.py test
 
 ## Technologies Used
 
@@ -62,7 +62,6 @@ The user can:
 | Registration            | Submit regitration form  | User creates an account and receives welcome email   |
 | Subscription            | Submit subscription form | User receives email eb=very time there is a new post |
 | Post an image          | 'image.jpeg' | Image is posted and appears on profile page |
-
 
 ## Support and contact details
 
