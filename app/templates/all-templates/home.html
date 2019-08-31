@@ -1,0 +1,39 @@
+{% extends 'all-templates/base.html' %}
+
+{% block content %}
+<hr>
+<div class="welcome"><h1 class="text-center">Welcome to Instagram</h1 ></div>
+
+    <hr>
+    <style>
+        .welcome h1{
+            font-family:'Kaushan Script', cursive;
+            font-weight: 700;
+            font-size: 50px;
+        }
+    </style>
+    <br><br>
+    <div class="wrapper-grid">
+        {% for image_item in images %}
+        <div class="card" style="height: 350px; margin-bottom: 10px;" >
+            <div class="card-title">
+                <img class="rounded-circle account-img" src="/media/images/anonymous.png"  style="height: 20px; width:20px; margin-bottom: 5px;">
+                <small class="text-muted"></small>
+            </div>
+            <div class="card-body">
+                <img class="img-fluid" src='{{image_item.image.url}}'>
+                <h2><a class="article-title" href="#"></a></h2>
+                <p class="article-content">{{image_item.image_caption}}</p>
+                
+                <a href=" #">
+                    
+                    <i class="far fa-comment">Add a comment...</i></a>
+                    <a href="">
+                        <i class="far fa-heart"></i></a>
+                        <hr>
+                    </div>             
+                </div>
+                {% endfor %}
+            </div>
+            
+            {% endblock %}

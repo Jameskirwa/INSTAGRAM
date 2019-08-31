@@ -1,0 +1,32 @@
+.wrapper-grid {
+    display: grid;
+    grid-gap: -10px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-items: center;
+}
+.card{
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    margin-left: 35px;
+}
+.card img{
+    height: 250px;
+    width: 350px;
+}
+.panel-heading h1{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: black;
+}
+.profile-img {
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-left: 50px;
+}
+
+.profile-img img {
+    border-radius: 10rem;
+    height: 130px;
+}

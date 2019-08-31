@@ -1,0 +1,45 @@
+{% extends 'all-templates/base.html' %}
+
+{% load bootstrap3 %}
+{% block content %}
+<div class="container-fluid">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="panel-default">
+            <div class="panel-heading">
+                <h1 class="text-center" style="font-family: 'Lobster', cursive; font-size: 30px; color: black;">Upload image</h1>
+            </div>
+            <div class="panel-body">
+                <form  action="{%url 'upload'%}" method="POST" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    
+                    {% bootstrap_form form layout='inline' %}
+                    <input class="btn btn-success btn-lg" type="submit" value="Upload">
+                </form>
+                <style>
+                    .btn {
+                        position: relative;
+                        display: inline-block;
+                        margin: 1em;
+                        padding: 1em 2em;
+                        border: 0;
+                        border-radius: 30px;
+                        text-align: center;
+                        white-space: nowrap;
+                        cursor: pointer;
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 24px;
+                    }
+                </style>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{{form.media}}
+{% endblock %}
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+{% endblock %}

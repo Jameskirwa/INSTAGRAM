@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="/media/images/favicon.png" type="image/x-icon" style="margin-left: -50px;" >
+</head>
+<body >
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    
+    <!-- Navbar brand -->
+    <div class="brand" style="text-align: left;" >
+      <a class="navbar-brand" href="{% url 'index' %}"><img src="/media/images/brand.png" alt="" height="50px"></a>
+      <a  class="navbar-brand" href="#"><img src="/media/images/images.png" alt="" height="50px" style="margin-left: -50px;" ></a>
+    </div>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- <h1><center>Blogs</center></h1> -->
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+  </div>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basic" >
+    {% if user.is_authenticated %}
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false"><p>Account</p></a>
+      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="{% url 'home' %}"><p>Home</p></a>
+        <a class="dropdown-item" href="/accounts/password/change"><p>Change password</p></a>
+        <a class="dropdown-item" href="{% url 'profile' username=user %}"><p>View Profile</p></a>
+        <a class="dropdown-item" href="/logout"><p>Logout</p></a>
+      </div>
+    </div>
+    <style>
+      #navbarDropdownMenuLink p{
+        font-family: 'Lobster', cursive;
+        font-size: 20px; 
+      }
+    </style>
+    {% else %}
+    <a class="btn btn-default" href="/accounts/login/">Login</a>
+    {% endif %}
+  </div>
+</nav>
+<!--/.Navbar-->
+</body>
+</html>
