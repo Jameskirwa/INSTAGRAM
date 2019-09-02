@@ -24,7 +24,7 @@ MODE = config('MODE', default='dev')
 SECRET_KEY = 'jemo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 DEBUG= True
