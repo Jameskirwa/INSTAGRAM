@@ -1,4 +1,4 @@
-#!/home/james/Desktop/INSTAGRAM/virtual/bin/python
+#!/home/james/Desktop/INSTAGRAM/virtual/bin/python3.6
 # -*- coding: utf-8 -*-
 import re
 import sys
