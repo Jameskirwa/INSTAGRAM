@@ -29,7 +29,7 @@ class Profile(models.Model):
 
 class Image(models.Model):
     """
-    Image model class
+    create an image model class
     """
     image = models.ImageField(upload_to='media/')
     image_name = models.CharField(max_length=60)
